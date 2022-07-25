@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <button>Click me</button>
+    </form>
+    <script>
+
+function isWebBluetoothEnabled() {
+    if (!navigator.bluetooth) {
+      console.log('Web Bluetooth API is not available in this browser!')
+      return false
+    }
+
+    return true
+  }
+
+  function getDeviceInfo() {
+    let options = {
+      acceptAllDevices: true // Option to accept all devices
+      
+    }
+
+    console.log('Requesting Bluetooth Device...')
+    navigator.bluetooth.requestDevice({
+  acceptAllDevices: true,
+  optionalServices: ['0000fee0-0000-1000-8000-00805f9b34fb', '0000fee1-0000-1000-8000-00805f9b34fb']
+
+})
+.then(device => { /* … */ })
+.catch(error => { console.error(error); });
+
+    navigator.bluetooth.requestDevice(options).then(device => {
+      console.log('> Name: ' + device.name)
+      console.log('> id: ' + device.id)
+      console.log('> Connected:        ' + device.gatt.connected)
+      return device.gatt.connect();
+    })
+    .catch(error => {
+      console.log('Argh! ' + error)
+    })
+  }
+
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.stopPropagation()
+    event.preventDefault()
+
+    if (isWebBluetoothEnabled()) {
+      getDeviceInfo()
+    }
+  })
+    </script>
+</body>
+</html>
