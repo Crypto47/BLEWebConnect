@@ -7,8 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-    <script src="jquery-3.6.0.min.js"></script>
+
+
+      
 
     <script type = "text/javascript">  
 
@@ -141,29 +142,9 @@ function isWebBluetoothEnabled() {
     }
    }
 
+
+
    console.log("heart"+ heart+"bat"+battery+name);
-
-
-
-
-
-
-
-   jQuery(document).ready(function($){
-
-      $.ajax({
-        url: 'index.php',
-        data: {
-          'hrt1': heart,
-          'btry1': battery,
-          'name1':name
-        },
-        success: function(data){
-          console.log("Happy")
-        }
-      });
-
-  });
   
         </script>  
 </head>
