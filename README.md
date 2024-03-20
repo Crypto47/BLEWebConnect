@@ -2,7 +2,7 @@
 
 ## Connecting Bluetooth Low Energy Devices via Web BLE API and Storing Data in MySQL Database
 
-BLEWebConnect is a powerful tool that allows you to connect Bluetooth Low Energy (BLE) devices directly through your web browser, including Chrome, Edge, and Firefox. With seamless integration of the Web BLE API, you can effortlessly establish connections and retrieve data from your BLE devices.
+This project leverages WEB BLE API to collect data from BLE devices in real-time. Front-end: HTML, CSS, JS, JQuery; Back-end: PHP, MYSQL database for efficient data processing and storage. Experience seamless real-time data monitoring and analysis with this user-friendly solution.
 
 ![WhatsApp Image 2024-03-21 at 02 05 47_95bd0db6](https://github.com/Crypto47/BLEWebConnect/assets/61820693/0fe1a295-2547-4fd7-b1e8-1f8cf04e276b)
 ![WhatsApp Image 2024-03-21 at 02 05 48_d4ffc403](https://github.com/Crypto47/BLEWebConnect/assets/61820693/b835b7df-1b02-4c0f-b9c7-04c6b3eafcde)
